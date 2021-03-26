@@ -1,0 +1,16 @@
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+	selector: 'app-hero-list',
+	templateUrl: './hero-list.component.html',
+	styleUrls: ['./hero-list.component.scss']
+})
+export class HeroListComponent implements OnInit {
+	public heroList = ['Mattia', 'Fabio', 'Marco'];
+
+	constructor() { }
+
+	ngOnInit(): void {
+	}
+
+}
