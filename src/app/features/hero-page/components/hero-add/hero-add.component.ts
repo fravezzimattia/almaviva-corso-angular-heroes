@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroDto } from '../../models/hero-dto.model';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
 	selector: 'app-hero-add',
@@ -8,12 +10,21 @@ import { Component, OnInit } from '@angular/core';
 export class HeroAddComponent implements OnInit {
 	public name: string = '';
 
-	constructor() { }
+	constructor(
+		private heroService: HeroService
+	) { }
 
 	ngOnInit(): void {
 	}
 
 	public save() {
-		console.log(this.name);
+		const hero: HeroDto = new HeroDto({
+			id: undefined,
+			ability: 'Super Code!',
+			name: this.name
+		});
+
+		this.heroService.add(hero);
+
 	}
 }

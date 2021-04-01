@@ -8,6 +8,8 @@ import { MatListModule } from '@angular/material/list';
 import { HeroListComponent } from './components/hero-list/hero-list.component';
 import { HeroAddComponent } from './components/hero-add/hero-add.component';
 import { FormsModule } from '@angular/forms';
+import { HeroService } from './services/hero.service';
+import { HeroStore } from './services/hero.store';
 
 @NgModule({
 	declarations: [
@@ -21,6 +23,10 @@ import { FormsModule } from '@angular/forms';
 		SharedModule,
 		MatListModule,
 		FormsModule
+	],
+	providers: [
+		HeroStore,
+		HeroService
 	]
 })
 export class HeroPageModule { }

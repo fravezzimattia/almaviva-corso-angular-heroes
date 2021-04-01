@@ -1,0 +1,24 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Ant-Man",
+      "ability": "Rimpicciolimento"
+    },
+    {
+      "id": 2,
+      "name": "Capitan America",
+      "ability": "Forza, velocità, resistenza e riflessi sovrumani"
+    },
+    {
+      "id": 3,
+      "name": "Vedova Nera",
+      "ability": "ipnotismo"
+    },
+    {
+      "name": "Fabio Strada",
+      "ability": "Super Code!",
+      "id": 4
+    }
+  ]
+}

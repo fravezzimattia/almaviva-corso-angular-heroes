@@ -1,5 +1,15 @@
 <nav>
-	<button routerLink='admin-page'>Admin</button>
-	<button routerLink='login-page'>Login</button>
-	<button routerLink='hero-page'>Heroes</button>
+
 </nav>
+
+
+<mat-toolbar [color]="configService.theme === themeEnum.Dark ? 'primary' : '' ">
+	<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+		<mat-icon>menu</mat-icon>
+	</button>
+	<span>My App</span>
+	<span class="example-spacer"></span>
+	<button mat-button routerLink='admin-page'>Admin</button>
+	<button mat-button routerLink='login-page'>Login</button>
+	<button mat-button routerLink='hero-page'>Heroes</button>
+</mat-toolbar>

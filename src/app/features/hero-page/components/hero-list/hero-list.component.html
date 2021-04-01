@@ -1,7 +1,8 @@
 <p>hero-list works!</p>
 
 <ul>
-	<li *ngFor="let item of heroList">
-		{{ item }}
+	<li *ngFor="let item of heroStore.heroes">
+		{{ item.name }} - {{ item.ability }}
+		<button (click)="heroService.delete(item.id)">Delete</button>
 	</li>
 </ul>
