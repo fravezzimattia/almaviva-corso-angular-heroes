@@ -7,7 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MatListModule } from '@angular/material/list';
 import { HeroListComponent } from './components/hero-list/hero-list.component';
 import { HeroAddComponent } from './components/hero-add/hero-add.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroService } from './services/hero.service';
 import { HeroStore } from './services/hero.store';
 
@@ -22,7 +22,8 @@ import { HeroStore } from './services/hero.store';
 		HeroPageRoutingModule,
 		SharedModule,
 		MatListModule,
-		FormsModule
+		FormsModule,
+		ReactiveFormsModule
 	],
 	providers: [
 		HeroStore,
