@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AppConfig } from 'src/app/core/configs/app-config';
 import { HeroDto } from '../models/hero-dto.model';
 import { HeroStore } from './hero.store';
 
@@ -7,21 +8,22 @@ import { HeroStore } from './hero.store';
 export class HeroService {
 	constructor(
 		private httpClient: HttpClient,
-		private heroStore: HeroStore
+		private heroStore: HeroStore,
+		private appConfig: AppConfig
 	) { }
 
 	public getHeroes() {
-		this.httpClient.get<HeroDto[]>('http://localhost:3000/heroes')
+		this.httpClient.get<HeroDto[]>(`${this.appConfig.baseUrl}${this.appConfig.endpoints.heroes.baseUrl}`)
 			.subscribe(res => this.heroStore.init(res))
 	}
 
 	public delete(id: number) {
-		this.httpClient.delete('http://localhost:3000/heroes/' + id)
+		this.httpClient.delete(`${this.appConfig.baseUrl}${this.appConfig.endpoints.heroes.baseUrl}/${id}`)
 			.subscribe(() => this.heroStore.delete(id))
 	}
 
 	public add(hero: HeroDto) {
-		this.httpClient.post('http://localhost:3000/heroes', hero)
+		this.httpClient.post(`${this.appConfig.baseUrl}${this.appConfig.endpoints.heroes.baseUrl}`, hero)
 			.subscribe()
 	}
 }

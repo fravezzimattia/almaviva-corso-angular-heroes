@@ -10,6 +10,8 @@ import { HeroAddComponent } from './components/hero-add/hero-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroService } from './services/hero.service';
 import { HeroStore } from './services/hero.store';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from 'src/app/core/interceptors/jwt.interceptor';
 
 @NgModule({
 	declarations: [
@@ -27,7 +29,8 @@ import { HeroStore } from './services/hero.store';
 	],
 	providers: [
 		HeroStore,
-		HeroService
+		HeroService,
+		{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
 	]
 })
 export class HeroPageModule { }

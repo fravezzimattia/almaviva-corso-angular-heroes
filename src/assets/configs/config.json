@@ -1,0 +1,8 @@
+{
+	"baseUrl": "http://localhost:3000",
+	"endpoints": {
+		"heroes": {
+			"baseUrl": "/heroes"
+		}
+	}
+}
