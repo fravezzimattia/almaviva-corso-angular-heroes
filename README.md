@@ -6,3 +6,12 @@ almaviva-corso-angular-heroes
 - Routes
 - Lazy Loading
 - Core vs Shared
+
+- Dynamic Components
+- Forms
+- Reactive Forms
+- Validations 
+
+- Guards
+- Interceptors
+- Configuration Multi Env
