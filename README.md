@@ -15,3 +15,5 @@ almaviva-corso-angular-heroes
 - Guards
 - Interceptors
 - Configuration Multi Env
+
+- Cold vs Hot Observable
