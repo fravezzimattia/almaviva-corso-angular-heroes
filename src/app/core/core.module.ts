@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { AppConfigGetter, AppConfigInitializer, AppConfigLoader } from './loaders/app-config.loader';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
 	declarations: [
@@ -19,7 +20,8 @@ import { AppConfigGetter, AppConfigInitializer, AppConfigLoader } from './loader
 		MatToolbarModule,
 		MatIconModule,
 		MatButtonModule,
-		HttpClientModule
+		HttpClientModule,
+		MatSelectModule
 	],
 	exports: [
 		NavbarComponent

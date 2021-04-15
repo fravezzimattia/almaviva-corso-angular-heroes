@@ -3,6 +3,12 @@
 	"endpoints": {
 		"heroes": {
 			"baseUrl": "/heroes"
+		},
+		"abilities": {
+			"baseUrl": "/abilities"
+		},
+		"heroesAbilities": {
+			"baseUrl": "/heroes-abilities"
 		}
 	}
 }

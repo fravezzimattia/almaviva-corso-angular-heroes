@@ -8,8 +8,15 @@
 		<mat-icon>menu</mat-icon>
 	</button>
 	<span>My App</span>
+	<label>Lingua Selezionata: {{ languageService.getLanguage() | async }}</label>
 	<span class="example-spacer"></span>
 	<button mat-button routerLink='admin-page'>Admin</button>
 	<button mat-button routerLink='login-page'>Login</button>
 	<button mat-button routerLink='hero-page'>Heroes</button>
+	<mat-form-field appearance="fill">
+		<mat-select (selectionChange)="changeLanguage($event)">
+			<mat-option [value]="appLanguages.it">Italiano</mat-option>
+			<mat-option [value]="appLanguages.en">Inglese</mat-option>
+		</mat-select>
+	</mat-form-field>
 </mat-toolbar>

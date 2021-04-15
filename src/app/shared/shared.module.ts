@@ -5,6 +5,7 @@ import { materialModule } from './material.module';
 import { AdDirective } from './directives/ad-host.directive';
 import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
 import { AdHeroJobComponent, HeroProfileComponent } from './components/';
+import { BaseComponent } from './components/base/base.component';
 
 @NgModule({
 	declarations: [
@@ -12,7 +13,8 @@ import { AdHeroJobComponent, HeroProfileComponent } from './components/';
 		AdBannerComponent,
 		AdHeroJobComponent,
 		HeroProfileComponent,
-		AdDirective
+		AdDirective,
+		BaseComponent
 	],
 	imports: [
 		CommonModule,

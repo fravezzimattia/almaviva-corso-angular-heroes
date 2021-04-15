@@ -12,12 +12,15 @@ import { HeroService } from './services/hero.service';
 import { HeroStore } from './services/hero.store';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from 'src/app/core/interceptors/jwt.interceptor';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { AbilityService } from './services/ability.service';
 
 @NgModule({
 	declarations: [
 		HeroPageComponent,
 		HeroListComponent,
-		HeroAddComponent
+		HeroAddComponent,
+		HeroDetailComponent
 	],
 	imports: [
 		CommonModule,
@@ -30,6 +33,7 @@ import { JwtInterceptor } from 'src/app/core/interceptors/jwt.interceptor';
 	providers: [
 		HeroStore,
 		HeroService,
+		AbilityService,
 		{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
 	]
 })

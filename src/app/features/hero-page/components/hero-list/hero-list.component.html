@@ -4,5 +4,6 @@
 	<li *ngFor="let item of heroStore.heroes">
 		{{ item.name }} - {{ item.ability }}
 		<button (click)="heroService.delete(item.id)">Delete</button>
+		<button (click)="goToDetail(item.id)">Go to detail</button>
 	</li>
 </ul>

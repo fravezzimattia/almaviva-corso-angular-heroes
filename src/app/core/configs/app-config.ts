@@ -3,6 +3,12 @@ export class AppConfig {
 	endpoints!: {
 		heroes: {
 			baseUrl: string
+		},
+		abilities: {
+			baseUrl: string
+		},
+		heroesAbilities: {
+			baseUrl: string
 		}
 	}
 }
