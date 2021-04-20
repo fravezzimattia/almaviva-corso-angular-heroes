@@ -13,6 +13,8 @@ export class HeroService {
 	) { }
 
 	public getHeroes() {
+		this.httpClient.get('http://51.103.149.92/api/server-service')
+			.subscribe(res => alert("res"));
 		this.httpClient.get<HeroDto[]>(`${this.appConfig.baseUrl}${this.appConfig.endpoints.heroes.baseUrl}`)
 			.subscribe(res => this.heroStore.init(res))
 	}

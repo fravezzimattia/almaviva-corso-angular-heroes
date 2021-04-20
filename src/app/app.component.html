@@ -1,2 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<ng-container *ngIf="!message; else splashscreen">
+	<app-navbar></app-navbar>
+	<router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #splashscreen>
+	<div class="splashscreen">
+		{{ message }}
+	</div>
+</ng-template>
