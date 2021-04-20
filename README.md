@@ -17,3 +17,5 @@ almaviva-corso-angular-heroes
 - Configuration Multi Env
 
 - Cold vs Hot Observable
+
+- RXJS
