@@ -9,10 +9,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { AppConfigGetter, AppConfigInitializer, AppConfigLoader } from './loaders/app-config.loader';
 import { MatSelectModule } from '@angular/material/select';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store/store.config';
+import { ProfileComponent } from './components/profile/profile.component';
+import { EffectsModule } from '@ngrx/effects';
+import { ProfileEffects } from './components/profile/store/profile.effects';
 
 @NgModule({
 	declarations: [
-		NavbarComponent
+		NavbarComponent,
+		ProfileComponent
 	],
 	imports: [
 		CommonModule,
@@ -21,7 +27,10 @@ import { MatSelectModule } from '@angular/material/select';
 		MatIconModule,
 		MatButtonModule,
 		HttpClientModule,
-		MatSelectModule
+		MatSelectModule,
+
+		StoreModule.forRoot(reducers),
+		EffectsModule.forRoot([ProfileEffects])
 	],
 	exports: [
 		NavbarComponent
@@ -32,9 +41,9 @@ export class CoreModule {
 		return {
 			ngModule: CoreModule,
 			providers: [
-				AppConfigLoader,
-				AppConfigInitializer,
-				AppConfigGetter,
+				// AppConfigLoader,
+				// AppConfigInitializer,
+				// AppConfigGetter,
 				ConfigService
 			]
 		}

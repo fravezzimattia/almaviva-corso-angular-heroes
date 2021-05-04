@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { getProfile } from 'src/app/core/components/profile/store/profile.actions';
+import { ProfileState } from 'src/app/core/components/profile/store/profile.reducer';
 import { AppRoles } from 'src/app/core/configs/app-roles';
 import { LocalStorageItem } from 'src/app/core/configs/local-storage-item';
 import { ConfigService } from 'src/app/core/services/config.service';
@@ -16,10 +19,14 @@ export class LoginPageComponent {
 
 	constructor(
 		public configService: ConfigService,
-		private localStorageService: LocalStorageService
+		private localStorageService: LocalStorageService,
+		private readonly store: Store<ProfileState>
 	) { }
 
 	public login(userType: AppRoles) {
+		debugger;
+		this.store.dispatch(getProfile({ id: 1 }));
+
 		this.localStorageService.removeItem(LocalStorageItem.user);
 		const user = {
 			name: 'Mattia',

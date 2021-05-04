@@ -56,5 +56,11 @@
 			"heroId": 1,
 			"abilityId": 2
 		}
+	],
+	"profiles": [
+		{
+			"id": 1,
+			"nome": "Mattia"
+		}
 	]
 }

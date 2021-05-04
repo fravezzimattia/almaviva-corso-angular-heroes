@@ -9,6 +9,9 @@ export class AppConfig {
 		},
 		heroesAbilities: {
 			baseUrl: string
+		},
+		profiles: {
+			baseUrl: string
 		}
 	}
 }

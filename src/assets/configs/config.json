@@ -9,6 +9,9 @@
 		},
 		"heroesAbilities": {
 			"baseUrl": "/heroes-abilities"
+		},
+		"profiles": {
+			"baseUrl": "/profiles"
 		}
 	}
 }

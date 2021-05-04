@@ -3,6 +3,7 @@ import { AsyncSubject, BehaviorSubject, ConnectableObservable, empty, from, gene
 import { iif, interval, of, zip } from 'rxjs';
 import { combineLatest, concat, fromEvent, Observable, timer } from 'rxjs';
 import { bufferTime, debounceTime, delay, distinctUntilChanged, every, filter, map, mergeMap, multicast, publish, share, startWith, take, tap, withLatestFrom } from 'rxjs/operators';
+import { ConfigService } from './core/services/config.service';
 
 @Component({
 	selector: 'app-root',
