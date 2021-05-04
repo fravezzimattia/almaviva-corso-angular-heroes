@@ -19,3 +19,5 @@ almaviva-corso-angular-heroes
 - Cold vs Hot Observable
 
 - RXJS
+
+- NGRX
